@@ -1,3 +1,5 @@
+#!/usr/bin/groovy
+
 package io.vtrduque;
 
 def helloWorld(){
