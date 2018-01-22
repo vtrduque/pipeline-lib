@@ -2,7 +2,9 @@
 
 package io.vtrduque;
 
-def helloWorld(){
-  println "Hello world :)"
+class Pipeline {
+  def helloWorld(){
+    println "Hello world :)"
+  }
 }
 
