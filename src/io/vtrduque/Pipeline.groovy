@@ -6,7 +6,7 @@ def helloWorld() {
   println "Hello world :)"
 }
 
-def npmInsstall() {
+def npmInstall() {
   sh 'npm install'
 }
 
