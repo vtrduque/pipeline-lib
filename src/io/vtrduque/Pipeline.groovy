@@ -11,7 +11,7 @@ def npmInstall() {
   sh 'npm install'
 }
 
-def dockerBuildImage(image) {
+def dockerBuildImage(imageName) {
   sh "docker build -t ${imageName}  ."
 }
 
