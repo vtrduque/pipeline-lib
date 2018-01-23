@@ -34,7 +34,7 @@ def isEnabled() {
 }
 
 def prepareDeploy(branch, fullName) {
-    (branch == 'master') ? sh "sh deploy.sh $fullName develop" : sh "sh deploy.sh $fullName prod"
+    (branch == 'master') ? sh "deploy.sh $fullName develop" : sh "deploy.sh $fullName prod"
     sh "cat .generated/deployment.yml"
   }
 }
