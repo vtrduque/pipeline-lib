@@ -3,10 +3,11 @@
 package io.vtrduque;
 
 def helloWorld() {
-  println "Hello world :)"
+  println 'Hello world :)'
 }
 
 def npmInstall() {
+  println 'Running npm install'
   sh 'npm install'
 }
 
