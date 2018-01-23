@@ -22,7 +22,7 @@ def dockerPush(registry, credentials, imageName, prefix, version) {
   }
 }
 
-def disabled?() {
+def isEnabled() {
   config = readJSON file: 'config.json'
 
   println "pipeline config ==> ${config}"
