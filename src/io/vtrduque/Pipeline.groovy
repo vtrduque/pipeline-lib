@@ -21,3 +21,14 @@ def dockerPush(registry, credentials, imageName, prefix, version) {
     docker.image(imageName).push(fullName)
   }
 }
+
+def disabled?() {
+  config = readJSON file: 'config.json'
+
+  println "pipeline config ==> ${config}"
+
+  if (!config["pipeline"]["enabled"]) {
+    println "pipeline disabled"
+    sh "exit 0"
+  }
+}
