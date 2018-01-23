@@ -42,3 +42,9 @@ def prepareDeploy(branch, fullName) {
 
   sh "cat .generated/deployment.yml"
 }
+
+def deployToKubernetes(branch) {
+  if (branch == 'dev' || branch == 'master' || branch == 'pipeline-lib') {
+    sh "kubectl apply -f .generated/deployment.yml"
+  }
+}
